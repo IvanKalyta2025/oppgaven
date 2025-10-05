@@ -30,6 +30,11 @@ namespace oppgaven.Main
                     Calculator calculator = new Calculator();
                     calculator.Run();
                 }
+                else if (choice == "3")
+                {
+                    Collections ListString = new Collections();
+                    ListString.ListSrting();
+                }
                 else if (choice == "0")
                 {
                     Console.WriteLine("---------");
