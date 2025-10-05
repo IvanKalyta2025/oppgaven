@@ -10,19 +10,36 @@ namespace oppgaven.Main
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Velg en av oppgavene mine");
-            Console.WriteLine("Forskjellige variabler av typene");
-            Console.WriteLine("En enkel kalkulator");
-
-            string? choice = Console.ReadLine();
-
-            if (choice == "1")
+            while (true)
             {
-                CookieBase cookes = new CookieBase();
-                cookes.ShowData();
+                Console.WriteLine("Velg en av oppgavene mine");
+                Console.WriteLine("1: Forskjellige variabler av typene");
+                Console.WriteLine("2: En enkel kalkulator");
+                Console.WriteLine("0: while - return");
+
+
+                string? choice = Console.ReadLine();
+
+                if (choice == "1")
+                {
+                    CookieBase cookes = new CookieBase();
+                    cookes.ShowData();
+                }
+                else if (choice == "2")
+                {
+                    Calculator calculator = new Calculator();
+                    calculator.Run();
+                }
+                else if (choice == "0")
+                {
+                    Console.WriteLine("---------");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Ukjent valg. Prøv igjen neste gang.");
+                }
             }
         }
-
-
     }
 }

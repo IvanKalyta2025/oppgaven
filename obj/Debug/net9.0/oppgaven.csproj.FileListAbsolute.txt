@@ -12,3 +12,4 @@
 /Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.pdb
 /Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.genruntimeconfig.cache
 /Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/ref/oppgaven.dll
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.sourcelink.json

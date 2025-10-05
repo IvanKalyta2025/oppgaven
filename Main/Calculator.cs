@@ -16,11 +16,6 @@ using System.Threading.Tasks;
 
 namespace oppgaven.Main
 {
-
-    static void Main(string[] args)
-    {
-        
-    }
     public interface IOperation
     {
         double Execute(double a, double b);
@@ -53,5 +48,59 @@ namespace oppgaven.Main
         public string Symbol => "/";
         public string Description => "Divide";
 
+    }
+    public class Calculator
+    {
+        public void Run()
+        {
+            {
+                Console.WriteLine("En enkel kalkulator");
+
+                Console.Write("Skriv inn det første tallet: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Skriv inn det andre tallet: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("╔══════════ KALKULATOR ══════════╗");
+                Console.WriteLine("║ Velg operasjon:                ║");
+                Console.WriteLine("║ [1] +  (Addisjon)              ║");
+                Console.WriteLine("║ [2] -  (Subtraksjon)           ║");
+                Console.WriteLine("║ [3] *  (Multiplikasjon)        ║");
+                Console.WriteLine("║ [4] /  (Divisjon)              ║");
+                Console.WriteLine("╚════════════════════════════════╝");
+                string? op = Console.ReadLine();
+
+                double result;
+
+                try
+                {
+                    switch (op)
+                    {
+                        case "1":
+                            result = new AddOperation().Execute(a, b);
+                            break;
+                        case "2":
+                            result = new SubtractOperation().Execute(a, b);
+                            break;
+                        case "3":
+                            result = new MultiplyOperation().Execute(a, b);
+                            break;
+                        case "4":
+                            result = new DivideOperation().Execute(a, b);
+                            break;
+                        default:
+                            Console.WriteLine("Ukjent operasjon.");
+                            return;
+                    }
+
+                    Console.Write($"Resultat: {result}");
+                }
+                catch (DivideByZeroException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }

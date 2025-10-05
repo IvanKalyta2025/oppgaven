@@ -25,7 +25,7 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class Cookie_base
+    public class CookieBase
     {
 
         string cookie_name = "Pink Puppy";
