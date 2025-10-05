@@ -1,0 +1,14 @@
+/Users/ivan/Desktop/oppgaven/bin/Debug/net9.0/oppgaven
+/Users/ivan/Desktop/oppgaven/bin/Debug/net9.0/oppgaven.deps.json
+/Users/ivan/Desktop/oppgaven/bin/Debug/net9.0/oppgaven.runtimeconfig.json
+/Users/ivan/Desktop/oppgaven/bin/Debug/net9.0/oppgaven.dll
+/Users/ivan/Desktop/oppgaven/bin/Debug/net9.0/oppgaven.pdb
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.AssemblyInfoInputs.cache
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.AssemblyInfo.cs
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.csproj.CoreCompileInputs.cache
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.dll
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/refint/oppgaven.dll
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.pdb
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/oppgaven.genruntimeconfig.cache
+/Users/ivan/Desktop/oppgaven/obj/Debug/net9.0/ref/oppgaven.dll
