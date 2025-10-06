@@ -34,6 +34,42 @@ namespace oppgaven.Main
                     shoppingList.Add(userInput.ToLower());
             }
         }
+
+        public void CashRegisterList()
+        {
+            List<int> cashRegisterList = new List<int>
+         {
+            3,
+                   4,
+              5,
+                    6
+              };
+
+            int userInputInt;
+
+            while (true)
+            {
+                Console.WriteLine("Dette er din handleliste");
+                foreach (int item in cashRegisterList)
+                {
+                    Console.WriteLine(item);
+                }
+
+                Console.Write("Enter your item: ");
+                string? userInput = Console.ReadLine();
+                if (int.TryParse(userInput, out userInputInt))
+                {
+                    if (cashRegisterList.Contains(userInputInt))
+                        cashRegisterList.Remove(userInputInt);
+                    else
+                        cashRegisterList.Add(userInputInt);
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a valid number!");
+                }
+            }
+        }
     }
 }
 //         public void ListInt()
