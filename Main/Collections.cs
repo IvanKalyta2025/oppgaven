@@ -22,41 +22,42 @@ namespace oppgaven.Main
             {
                 Console.WriteLine("Dette er din handlelist");
                 foreach (string item in shoppingList)
-                {
+
                     Console.WriteLine(item);
-                }
-                Console.WriteLine("Enter your item: ");
+
+                Console.Write("Enter your item: ");
                 userInput = Console.ReadLine() ?? string.Empty;
 
                 if (shoppingList.Contains(userInput.ToLower()))
                     shoppingList.Remove(userInput.ToLower());
                 else
                     shoppingList.Add(userInput.ToLower());
+
+                if (userInput?.ToLower() == "x")
+                {
+                    Console.WriteLine("Tilbake til menyen...");
+                    return;
+                }
             }
+
         }
 
         public void CashRegisterList()
         {
-            List<int> cashRegisterList = new List<int>
-         {
-            3,
-                   4,
-              5,
-                    6
-              };
+            List<int> cashRegisterList = new List<int> { 3, 4, 5, 6 };
 
             int userInputInt;
 
             while (true)
             {
-                Console.WriteLine("Dette er din handleliste");
+                Console.WriteLine("Du teller hvilke kasser som er opptatt i butikken.");
+                Console.WriteLine("Klikk på x for å gå tilbake til hovedmenyen");
                 foreach (int item in cashRegisterList)
-                {
                     Console.WriteLine(item);
-                }
 
-                Console.Write("Enter your item: ");
+                Console.Write("Skriv inn kassens nummer for å legge til eller fjerne den: ");
                 string? userInput = Console.ReadLine();
+
                 if (int.TryParse(userInput, out userInputInt))
                 {
                     if (cashRegisterList.Contains(userInputInt))
@@ -64,25 +65,49 @@ namespace oppgaven.Main
                     else
                         cashRegisterList.Add(userInputInt);
                 }
-                else
+
+                if (userInput?.ToLower() == "x")
                 {
-                    Console.WriteLine("Please enter a valid number!");
+                    Console.WriteLine("Tilbake til menyen...");
+                    return;
+                }
+            }
+        }
+
+        public void CashRegisterListDouble()
+        {
+            List<double> cashRegisterList = new List<double> { 2.323, 2329.32, 322.234, 4234.2343 };
+
+            double userInputInt;
+
+            while (true)
+            {
+                Console.WriteLine("Du teller hvilke kasser som er opptatt i butikken.");
+                Console.WriteLine("Klikk på x for å gå tilbake til hovedmenyen");
+                foreach (double item in cashRegisterList)
+                    Console.WriteLine(item);
+
+                Console.Write("Skriv inn kassens nummer for å legge til eller fjerne den: ");
+                string? userInput = Console.ReadLine();
+
+                if (double.TryParse(userInput, out userInputInt))
+                {
+                    if (cashRegisterList.Contains(userInputInt))
+                        cashRegisterList.Remove(userInputInt);
+                    else
+                        cashRegisterList.Add(userInputInt);
+                }
+
+                if (userInput?.ToLower() == "x")
+                {
+                    Console.WriteLine("Tilbake til menyen...");
+                    return;
                 }
             }
         }
     }
 }
-//         public void ListInt()
-//         {
-//             List<int> shoppingInt = new List<int>
-//             {
-//                 2,
-//                 3,
-//                 4,
-//                 5
-//             };
-//             int userInput;
-//         }
+
 //         public void ListDouble()
 //         {
 //             List<double> shoppingDouble = new List<double>

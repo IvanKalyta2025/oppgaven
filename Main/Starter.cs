@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using Main;
@@ -15,6 +16,7 @@ namespace oppgaven.Main
                 Console.WriteLine("Velg en av oppgavene mine");
                 Console.WriteLine("1: Forskjellige variabler av typene");
                 Console.WriteLine("2: En enkel kalkulator");
+
                 Console.WriteLine("0: while - return");
 
 
@@ -34,6 +36,16 @@ namespace oppgaven.Main
                 {
                     Collections ListString = new Collections();
                     ListString.ListSrting();
+                }
+                else if (choice == "4")
+                {
+                    Collections CashRegisterList = new Collections();
+                    CashRegisterList.CashRegisterList();
+                }
+                else if (choice == "5")
+                {
+                    Collections CashRegisterListDouble = new Collections();
+                    CashRegisterListDouble.CashRegisterListDouble();
                 }
                 else if (choice == "0")
                 {
