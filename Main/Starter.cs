@@ -21,7 +21,7 @@ namespace oppgaven.Main
                 Console.WriteLine("5: List <double>");
                 Console.WriteLine("6: Dictionary");
                 Console.WriteLine("0: slutt programmet");
-
+                Console.Write("\nDitt valg: ");
 
                 string? choice = Console.ReadLine();
 
