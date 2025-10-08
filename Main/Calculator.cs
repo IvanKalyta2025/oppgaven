@@ -94,7 +94,7 @@ namespace oppgaven.Main
                             return;
                     }
 
-                    Console.Write($"Resultat: {result}");
+                    Console.Write($"Resultat: {result}\n");
                 }
                 catch (DivideByZeroException ex)
                 {

@@ -16,8 +16,11 @@ namespace oppgaven.Main
                 Console.WriteLine("Velg en av oppgavene mine");
                 Console.WriteLine("1: Forskjellige variabler av typene");
                 Console.WriteLine("2: En enkel kalkulator");
-
-                Console.WriteLine("0: while - return");
+                Console.WriteLine("3: List <string>");
+                Console.WriteLine("4: List <int>");
+                Console.WriteLine("5: List <double>");
+                Console.WriteLine("6: Dictionary");
+                Console.WriteLine("0: slutt programmet");
 
 
                 string? choice = Console.ReadLine();
@@ -26,6 +29,7 @@ namespace oppgaven.Main
                 {
                     CookieBase cookes = new CookieBase();
                     cookes.ShowData();
+                    cookes.ShowData1();
                 }
                 else if (choice == "2")
                 {
@@ -47,9 +51,13 @@ namespace oppgaven.Main
                     Collections CashRegisterListDouble = new Collections();
                     CashRegisterListDouble.CashRegisterListDouble();
                 }
+                else if (choice == "6")
+                {
+                    Collections DescriptionData = new Collections();
+                    DescriptionData.DescriptionData();
+                }
                 else if (choice == "0")
                 {
-                    Console.WriteLine("---------");
                     return;
                 }
                 else
